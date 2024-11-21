@@ -1,0 +1,31 @@
+.container {
+  text-align: center;
+  >button{
+    margin-top: 3rem;
+  }
+}
+.main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around; /* Distribute items evenly with space around them */
+  padding: 1rem;
+  gap: 1rem;
+
+  section {
+    flex: 1 1 calc(15%);
+
+    box-sizing: border-box; /* Ensures padding and border are included in the width/height */
+    padding: 1rem;
+    background-color: lightgray;
+    text-align: center;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    p{
+        color: black;
+        text-align:center;
+    }
+  }
+}

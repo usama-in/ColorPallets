@@ -1,0 +1,33 @@
+.container{
+   padding:2rem 2rem 12rem 2rem;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 1rem;
+    
+
+}
+.mainsection{
+    background-color: white;
+    color: black;
+    /* padding: 1rem; */
+    border-radius: 10px;
+    box-shadow: 0px 2px 18px 0px rgba(167, 68, 68, 0.37);
+    text-align: center;
+    p{
+        font-weight: bold;
+    }
+    p,button{
+        margin: 1rem;
+    }
+
+}
+.imagesection{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    img{
+        width: 100%;
+    }
+    
+
+}
+

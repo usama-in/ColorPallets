@@ -1,0 +1,61 @@
+.header{
+    width: 100%;
+    
+    background-color:var(--main-hf-color);
+
+
+    
+}
+.nav{
+    height: 5rem;
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+}
+.list{
+    width: 30%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+
+    a{
+        text-decoration: none;
+        color: white;
+        /* margin-left: 1rem; */
+        font-size: larger;
+        text-transform: uppercase;
+        position: relative;
+        
+    }
+   
+    a:hover,
+    a.active{
+        color:red;
+        text-decoration: underline;
+    }
+
+}
+.nav-item {
+    position: relative; /* Set positioning context for the pseudo-element */
+     
+    cursor: pointer; /* Change cursor to pointer */
+}
+.nav-item::after {
+    content: ""; /* Required for pseudo-element */
+    position: absolute; /* Position relative to .nav-item */
+    left: 0; /* Start from the left */
+    bottom: 0; /* Position at the bottom */
+    height: 3px; /* Thickness of the underline */
+    width: 100%; /* Full width */
+    
+    background-color: rgb(250, 250, 250); /* Underline color */
+    transform: scaleX(0); /* Initial scale for animation */
+    transition: transform 0.3s ease; /* Smooth transition for the scale */
+    
+}
+
+.nav-item:hover::after {
+    transform: scaleX(1); /* Scale to full width on hover */
+    
+}

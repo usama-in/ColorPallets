@@ -1,0 +1,55 @@
+.container{
+    margin-top: 2rem;
+    
+        text-align: center;
+        text-transform: uppercase;
+        font-weight: bold;
+        padding-bottom: 12rem;
+        button{
+            margin-top: 3rem;
+        }
+    
+}
+.ani{
+    position: relative;
+}
+.ani::before{
+    content: 'Demo Albums';
+    /* font-size: larger; */
+    color: var(--main-hf-color);
+    animation: words 10s infinite ;
+}
+.ani::after{
+    content: "";
+    position: absolute;
+    height: 100%;
+    width:calc(100%+8px);
+    background-color: #242424;
+    border-left: 2px solid var(--main-hf-color);
+    right: -10px;
+    animation: cursor 0.8s infinite ,typing 12.2s steps(14) infinite ;
+}
+@keyframes cursor {
+    to{
+
+        border-left: 2px solid #242424; 
+    }
+}
+ @keyframes words {
+    
+    0% ,100%{
+        content: 'Demo Album';
+    }
+    
+}
+@keyframes typing {
+    10% ,15%,30%,35%,50%,55%,70%,75%,90%,95%{
+        width: 0;
+    }
+    5%,20%,25%,40%,45%,60%,65%,80%,85%{
+        width: calc(100% + 8px);
+    }
+    
+} 
+ 
+
